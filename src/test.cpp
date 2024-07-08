@@ -173,7 +173,7 @@ void rotaterun(int32_t speed)
     delay(10);
 }
 
-/*发送指令读取电机运行时的数据
+/*Send command to read data during motor operation
  */
 /*int read_rd(int id)
 {

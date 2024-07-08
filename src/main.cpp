@@ -219,18 +219,18 @@ void setup()
         HeapSelectIram doAllocationsInIRAM;
 #endif
 
-        ESPUI.addControl(ControlType::Number, "速度模式数值（正值前进-负值后退）", "0", ControlColor::Sunflower, Control::noParent, &numberCall_1);
-        ESPUI.addControl(ControlType::Number, "旋转模式数值（正值左转-负值右转）", "0", ControlColor::Dark, Control::noParent, &numberCall_2);
+        ESPUI.addControl(ControlType::Number, "Speed Mode Value (Positive for Forward - Negative for Reverse)", "0", ControlColor::Sunflower, Control::noParent, &numberCall_1);
+        ESPUI.addControl(ControlType::Number, "Rotation Mode Value (Positive for Left Turn - Negative for Right Turn)", "0", ControlColor::Dark, Control::noParent, &numberCall_2);
         button1 = ESPUI.addControl(
-            ControlType::Button, " ", "速度模式启动", ControlColor::Peterriver, Control::noParent, &buttonCallback_1);
+            ControlType::Button, " ", "Start Speed Mode", ControlColor::Peterriver, Control::noParent, &buttonCallback_1);
         button2 = ESPUI.addControl(
-            ControlType::Button, " ", "旋转模式启动", ControlColor::Peterriver, Control::noParent, &buttonCallback_2);
+            ControlType::Button, " ", "Start Rotation Mode", ControlColor::Peterriver, Control::noParent, &buttonCallback_2);
         button3 = ESPUI.addControl(
-            ControlType::Button, " ", "电机停止", ControlColor::Peterriver, Control::noParent, &buttonCallback_3);
+            ControlType::Button, " ", "Stop Motor", ControlColor::Peterriver, Control::noParent, &buttonCallback_3);
         button4 = ESPUI.addControl(
-            ControlType::Button, " ", "电机失能", ControlColor::Peterriver, Control::noParent, &buttonCallback_4);
+            ControlType::Button, " ", "Disable Motor", ControlColor::Peterriver, Control::noParent, &buttonCallback_4);
         /*button5 = ESPUI.addControl(
-            ControlType::Button, " ", "电机失能", ControlColor::Peterriver, Control::noParent, &buttonCallback_5);*/
+            ControlType::Button, " ", "Disable Motor", ControlColor::Peterriver, Control::noParent, &buttonCallback_5);*/
 
         ESPUI.begin("Myactuator Demo", "myactuator", "123456");
 
@@ -248,7 +248,7 @@ void setup()
 
 void loop()
 {
-    // put your setup code here, to loop run: (将您的设置代码放在此处，循环运行:)
+    // put your setup code here, to loop run:
     dnsServer.processNextRequest();
     if (status2 == 0)
     {
@@ -257,7 +257,7 @@ void loop()
         case 1:
             int32_t speed1;
             speed1 = -(Speed * 100);
-            speedrun(speed1); // 速度运行
+            speedrun(speed1); // Speed Run
             status1 = 0;
             status2 = 1;
             break;
@@ -286,7 +286,7 @@ void loop()
     {
         int32_t speed1;
         speed1=-(Speed*100);
-        speedrun(speed1); // 速度运行
+        speedrun(speed1); // Speed Run
         status1=0;
     }    
     if(status1==2&status2==2)

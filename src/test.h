@@ -15,10 +15,10 @@
 //extern int rxmotorspeed[4];
 //extern int rxmotorposition[4];
 
-//void positionrun(int, int32_t); // 位置运行
-void speedrun(int32_t speed); // 速度运行
-void rotaterun(int32_t speed);//原地旋转运行
-//int read_rd(int, int);   // 读取位置
+//void positionrun(int, int32_t); // Position run
+void speedrun(int32_t speed); // Speed run
+void rotaterun(int32_t speed); // Rotate in place
+//int read_rd(int, int);   // Read position
 void STOP();
 
 #endif
