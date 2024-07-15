@@ -1,0 +1,2 @@
+1. The file include->config.h defines the pinout for connection.
+2. The file src->main.cpp defines the main feature for input feedback
